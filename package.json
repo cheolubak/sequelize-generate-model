@@ -1,7 +1,7 @@
 {
 	"name": "sequelize-generate-model",
 	"version": "0.0.1",
-	"description": "sequelize-generate-model",
+	"description": "Generate sequelize model file",
 	"main": "index.js",
 	"scripts": {
 		"test": "jest"
@@ -10,9 +10,11 @@
 		"type": "git",
 		"url": "git+https://github.com/cheolubak/sequelize-generate-model.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"sequelize"
+	],
 	"author": "",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/cheolubak/sequelize-generate-model/issues"
 	},

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const {program} = require('commander');
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 
 const generator = require('./generator');
 
@@ -23,7 +24,7 @@ program.command('generate')
 
 program.action((cmd, args) => {
 	if (args) {
-		console.log('Can not found command.');
+		console.log(chalk.bold.red('Can not found command.'));
 		program.help();
 	} else {
 		inquirer.prompt([

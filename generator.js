@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const chalk = require('chalk');
 
 const typescriptTemplate = (model, underscore, charset) => {
 	return `/**
@@ -105,20 +106,20 @@ const generateTemplate = (mod, model, underscore, charset, filename, p) => {
 	const pathToFile = path.join(p, `${filename}.${mod}`);
 	if (mod === 'ts') {
 		if (exist(pathToFile)) {
-			console.error('Already exists file');
+			console.error(chalk.bold.red('Already exists file'));
 		} else {
 			fs.writeFileSync(pathToFile, typescriptTemplate(model, underscore, charset));
-			console.log(`Success generated ${pathToFile}`);
+			console.log(chalk.bold.green(`Success generated ${pathToFile}`));
 		}
 	} else if (mod === 'js') {
 		if (exist(pathToFile)) {
-			console.error('Already exists file');
+			console.error(chalk.bold.red('Already exists file'));
 		} else {
 			fs.writeFileSync(pathToFile, javascriptTemplate(model, underscore, charset));
-			console.log(`Success generated ${pathToFile}`);
+			console.log(chalk.bold.green(`Success generated ${pathToFile}`));
 		}
 	} else {
-		console.error(`For module, enter ts or js.`);
+		console.error(chalk.bold.red(`For module, enter ts or js.`));
 	}
 };
 
