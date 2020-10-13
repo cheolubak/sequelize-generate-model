@@ -1,0 +1,31 @@
+{
+	"name": "sequelize-generate-model",
+	"version": "0.0.1",
+	"description": "sequelize-generate-model",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cheolubak/sequelize-generate-model.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/cheolubak/sequelize-generate-model/issues"
+	},
+	"homepage": "https://github.com/cheolubak/sequelize-generate-model#readme",
+	"bin": {
+		"sequelize-generate-model": "./index.js"
+	},
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"commander": "^6.1.0",
+		"inquirer": "^7.3.3"
+	},
+	"devDependencies": {
+		"jest": "^26.5.3"
+	}
+}
